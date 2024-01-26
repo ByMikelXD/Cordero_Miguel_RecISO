@@ -4,7 +4,7 @@
 
 1. [Introducción](#introducción)
 2. [Programación Python](#Programación-Python)
-    * [Código 1](#Código1)
+    * [Código 1](#Descripción-de-lo-que-hace-el-algoritmo-1)
     * [Servidor NFS](#nfs-server)
     * [Servidores WEB](#servidores-web1-y-web2)
     * [Servidor BBDD](#ddbb)
@@ -12,11 +12,12 @@
 Introducción
 
 # Programación Python
-Descripción de lo que hace el algoritmo 1
+
+### Descripción de lo que hace el algoritmo 1
 
 El programa solicitara tres números al usuario, determina cuál es el mayor de ellos y luego pregunta si el usuario desea finalizar el proceso. Este bucle se repite hasta que el usuario ingresa 0 para finalizar el programa.
 
-## Código1
+Código1
 
 ![](FOTOS/)
 
