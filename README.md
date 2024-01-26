@@ -132,11 +132,7 @@ Fin Proceso
 
 Enunciado 3
 Implementa un algoritmo que busque el nombre de una ciudad entre un conjunto de diez ciudades
-predefinidas. Al inicio se creará el conjunto con el nombre de las diez ciudades. Posteriormente se
-pedirá el nombre de una ciudad al usuario. El programa indicará si la ciudad se encuentra en el
-conjunto o no. Deberá dar por válidas entradas en minúsculas, mayúsculas. Por ejemplo, Si
-tenemos almacenada “Mérida”, se dará por válido “mérida”, “Mérida”, “MÉRIDA”, “MériDa”,
-etc.
+predefinidas. Al inicio se creará el conjunto con el nombre de las diez ciudades. Posteriormente se pedirá el nombre de una ciudad al usuario. El programa indicará si la ciudad se encuentra en el conjunto o no. Deberá dar por válidas entradas en minúsculas, mayúsculas. Por ejemplo, Si tenemos almacenada “Mérida”, se dará por válido “mérida”, “Mérida”, “MÉRIDA”, “MériDa”, etc.
 
 ```
 Proceso BuscarCiudad
@@ -189,11 +185,82 @@ Fin Proceso
 ```
 
 Enunciado 4
-Desarrolla un programa que pida al usuario un número del 1 al 50 y que muestre la representación
-de dicho número en binario, octal y hexadecimal.
+Desarrolla un programa que pida al usuario un número del 1 al 50 y que muestre la representación de dicho número en binario, octal y hexadecimal.
+
+```
+def mostrar_representaciones(numero):
+    # Mostrar representación binaria
+    binario = bin(numero)[2:]  # El slicing [2:] se utiliza para eliminar el prefijo "0b" de la representación binaria
+    print(f"Representación binaria: {binario}")
+
+    # Mostrar representación octal
+    octal = oct(numero)[2:]   # El slicing [2:] se utiliza para eliminar el prefijo "0o" de la representación octal
+    print(f"Representación octal: {octal}")
+
+    # Mostrar representación hexadecimal
+    hexadecimal = hex(numero)[2:]  # El slicing [2:] se utiliza para eliminar el prefijo "0x" de la representación hexadecimal
+    print(f"Representación hexadecimal: {hexadecimal.upper()}")  # La función upper() se utiliza para mostrar en mayúsculas
+
+# Solicitar al usuario un número del 1 al 50
+try:
+    numero = int(input("Ingrese un número del 1 al 50: "))
+    if 1 <= numero <= 50:
+        mostrar_representaciones(numero)
+    else:
+        print("El número ingresado no está en el rango especificado.")
+except ValueError:
+    print("Por favor, ingrese un número válido.")
+```
 
 Enunciado 5
 Implementa un programa que pida al usuario una cantidad de dinero hasta que dicha cantidad sea
 múltiplo de 5 y, como máximo 3000. Una vez que se cumplan estas condiciones se tiene que
-mostrar al usuario el número de billetes de 100, 50, 20, 10 y 5 que se necesitan para obtener la
-cantidad de dinero indicada.
+mostrar al usuario el número de billetes de 100, 50, 20, 10 y 5 que se necesitan para obtener la cantidad de dinero indicada.
+
+```
+def desglose_billetes(cantidad):
+    # Inicializar variables para contar billetes
+    billetes_100 = billetes_50 = billetes_20 = billetes_10 = billetes_5 = 0
+
+    # Desglose de billetes
+    while cantidad >= 100:
+        billetes_100 += 1
+        cantidad -= 100
+
+    while cantidad >= 50:
+        billetes_50 += 1
+        cantidad -= 50
+
+    while cantidad >= 20:
+        billetes_20 += 1
+        cantidad -= 20
+
+    while cantidad >= 10:
+        billetes_10 += 1
+        cantidad -= 10
+
+    while cantidad >= 5:
+        billetes_5 += 1
+        cantidad -= 5
+
+    # Mostrar resultados
+    print(f"Billetes de 100: {billetes_100}")
+    print(f"Billetes de 50: {billetes_50}")
+    print(f"Billetes de 20: {billetes_20}")
+    print(f"Billetes de 10: {billetes_10}")
+    print(f"Billetes de 5: {billetes_5}")
+
+# Solicitar al usuario una cantidad de dinero
+while True:
+    try:
+        cantidad = int(input("Ingrese una cantidad de dinero (máximo 3000, múltiplo de 5): "))
+        if 0 < cantidad <= 3000 and cantidad % 5 == 0:
+            break  # Salir del bucle si la cantidad es válida
+        else:
+            print("La cantidad debe ser un múltiplo de 5 y no puede superar los 3000.")
+    except ValueError:
+        print("Por favor, ingrese un número válido.")
+
+# Calcular y mostrar el desglose de billetes
+desglose_billetes(cantidad)
+```
