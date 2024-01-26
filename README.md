@@ -13,8 +13,10 @@
    * [Enunciado 3](#Enunciado-3)
    * [Enunciado 4](#Enunciado-4)
    * [Enunciado 5](#Enunciado-5)
-5. []()
-6. []()
+5. [Linux](#lINUX)
+   *[Video 1](#Supuesto-práctico-usuarios,-grupos-y-permisos)
+6. [Comandos Linux](#Comandos-LINUX)
+   *[Ejercicio1](#Ejercicio-1)
 
 
 Introducción
@@ -351,3 +353,82 @@ Fin Proceso
 // Llamar al proceso para ejecutar el programa
 DesgloseBilletes()
 ```
+# LINUX
+### Supuesto práctico usuarios, grupos y permisos
+
+Escribe todas las órdenes necesarias para dar solución al siguiente supuesto:
+- Se va a utilizar un servidor para que los componentes de una empresa (compuesta por 4 empleados y 2 jefes) pueda acceder diferentes sitios del servidor.
+- Los empleados de la empresa pueden acceder con total libertad a su carpeta de trabajo y a la carpeta (/home/paracompartirempl).
+- Los jefes pueden acceder con total libertad a su carpeta de trabajo y a la carpeta compartida (/home/paracompartirjefes).
+- Los empleados no pueden acceder a las carpetas de trabajo de los jefes, tampoco a la carpeta compartida de los jefes.
+- Los jefes pueden acceder y visualizar el contenido del directorio “paracompartirempl”, pero no pueden alterar su contenido.
+
+Realiza todo lo necesario para resolver la cuestión anterior siendo tu maquina el servidor.
+Las operaciones y el orden en que se deben realizar es importante: crear usuarios, crear grupos,
+añadir usuarios a grupos, crear directorios, cambiar grupos de los directorios, etc.
+Crea otro usuario que se llame “fernando” y que no pertenezca a ningún grupo. Comprueba que se
+trata de un usuario y que con dicho usuario no es posible acceder a ninguna de las carpetas
+compartidas.
+
+
+
+# Comandos LINUX
+
+### Ejercicio 1
+
+Indica las instrucciones necesarias para mostrar en la pantalla, en el formato indicado, la siguiente
+información de tu usuario:
+Nombre de usuario: xxx
+Id de usuario: xxx
+Id de grupo: xxx
+Ruta de su directorio personal: xxx
+
+```
+echo "Nombre de usuario: $(whoami)"
+echo "Id de usuario: $(id -u)"
+echo "Id de grupo: $(id -g)"
+echo "Ruta de su directorio personal: $HOME"
+```
+
+### Ejercicio 2
+Escribe los comandos necesarios para crear y borrar un usuario. Debes explicar cada comando.
+El usuario tendrá su directorio personal en una ruta diferente a la habitual. Este directorio personal se creará a la vez que se crea el usuario. También se añadirá su nombre y apellidos en el momento de la creación, así como una fecha de caducidad de la cuenta.
+
+```
+sudo useradd -m -d /ruta/del/nuevo/directorio -c "Nombre Apellido" -e YYYY-MM-DD nombre_usuario
+```
++ sudo: Ejecuta el comando con privilegios de administrador.
++ useradd: Comando para agregar un nuevo usuario.
++ -m: Crea el directorio personal del usuario en la ruta especificada con la opción -d.
++ -d /ruta/del/nuevo/directorio: Especifica la ruta del directorio personal del nuevo usuario.
++ -c "Nombre Apellido": Añade el nombre y apellido del usuario como comentario.
++ -e YYYY-MM-DD: Establece una fecha de caducidad para la cuenta del usuario (en el formato Año-Mes-Día).
++ nombre_usuario: El nombre de usuario que deseas crear.
+
+Ejercicio 3
+• Crear un directorio dentro de Documentos llamado ejercicio_permisos
+• Dentro del directorio crear 9 archivos (archiv1,archiv2,etc.)
+• Establecer a cada archivo los siguientes permisos:
+◦ archiv1 -rwx------
+◦ archiv2 -rw-------
+◦ archiv3 -rwxrwxrwx
+◦ archiv4 -rwxrw-r--
+◦ archiv5 -rwxr-----
+◦ archiv6 -r-xrw-r--
+◦ archiv7 -r-------x
+◦ archiv8 -rw-r—r--
+◦ archiv9 -rw-rw-r—
+• Añade y/o retira permisos sobre los archivos anteriores utilizando los operadores + y - del
+'chmod' para que queden de la siguiente manera:
+◦ archiv1 -rwx---r--
+◦ archiv2 -r--------
+◦ archiv3 -rw-rw-rwarchiv4
+◦ -rwx-w----
+◦ archiv5 -rwx----wx
+◦ archiv6 -rwxrw----
+◦ archiv7 -rw---x-w
+◦ archiv8-------r--
+◦ archiv9 -rwx------
+• Crear un directorio y quitarle todos los permisos de ejecución.
+◦ Explicar qué pasa al intentar entrar al directorio con el comando cd.
+◦ Explicar el significado de los permisos r,w y x para directorios.
