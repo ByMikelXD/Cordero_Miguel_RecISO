@@ -188,28 +188,93 @@ Enunciado 4
 Desarrolla un programa que pida al usuario un número del 1 al 50 y que muestre la representación de dicho número en binario, octal y hexadecimal.
 
 ```
-def mostrar_representaciones(numero):
-    # Mostrar representación binaria
-    binario = bin(numero)[2:]  # El slicing [2:] se utiliza para eliminar el prefijo "0b" de la representación binaria
-    print(f"Representación binaria: {binario}")
+Proceso MostrarRepresentaciones
+    // Definir variables
+    Definir numero, binario, octal, hexadecimal Como Entero
 
-    # Mostrar representación octal
-    octal = oct(numero)[2:]   # El slicing [2:] se utiliza para eliminar el prefijo "0o" de la representación octal
-    print(f"Representación octal: {octal}")
+    // Solicitar al usuario un número del 1 al 50
+    Mientras Verdadero
+        Escribir "Ingrese un número del 1 al 50: "
+        Leer numero
 
-    # Mostrar representación hexadecimal
-    hexadecimal = hex(numero)[2:]  # El slicing [2:] se utiliza para eliminar el prefijo "0x" de la representación hexadecimal
-    print(f"Representación hexadecimal: {hexadecimal.upper()}")  # La función upper() se utiliza para mostrar en mayúsculas
+        Si numero >= 1 y numero <= 50 Entonces
+            Salir del Mientras
+        Fin Si
 
-# Solicitar al usuario un número del 1 al 50
-try:
-    numero = int(input("Ingrese un número del 1 al 50: "))
-    if 1 <= numero <= 50:
-        mostrar_representaciones(numero)
-    else:
-        print("El número ingresado no está en el rango especificado.")
-except ValueError:
-    print("Por favor, ingrese un número válido.")
+        Escribir "El número debe estar en el rango del 1 al 50. Intente nuevamente."
+    Fin Mientras
+
+    // Calcular representaciones binaria, octal y hexadecimal
+    binario <- ConvertirABinario(numero)
+    octal <- ConvertirAOctal(numero)
+    hexadecimal <- ConvertirAHexadecimal(numero)
+
+    // Mostrar resultados
+    Escribir "Representación binaria: ", binario
+    Escribir "Representación octal: ", octal
+    Escribir "Representación hexadecimal: ", hexadecimal
+
+Fin Proceso
+
+Proceso ConvertirABinario(numero)
+    // Función para convertir a representación binaria
+    Cadena binario
+    binario <- ""
+    
+    Mientras numero > 0 Hacer
+        binario <- (numero MOD 2) Concatenar binario
+        numero <- numero / 2
+    Fin Mientras
+    
+    Devolver binario
+Fin Proceso
+
+Proceso ConvertirAOctal(numero)
+    // Función para convertir a representación octal
+    Cadena octal
+    octal <- ""
+    
+    Mientras numero > 0 Hacer
+        octal <- (numero MOD 8) Concatenar octal
+        numero <- numero / 8
+    Fin Mientras
+    
+    Devolver octal
+Fin Proceso
+
+Proceso ConvertirAHexadecimal(numero)
+    // Función para convertir a representación hexadecimal
+    Cadena hexadecimal
+    hexadecimal <- ""
+    
+    Mientras numero > 0 Hacer
+        Resto <- numero MOD 16
+        Si Resto < 10 Entonces
+            hexadecimal <- Resto Concatenar hexadecimal
+        Sino
+            hexadecimal <- ConvertirAHexadecimalLetra(Resto) Concatenar hexadecimal
+        Fin Si
+        numero <- numero / 16
+    Fin Mientras
+    
+    Devolver hexadecimal
+Fin Proceso
+
+Proceso ConvertirAHexadecimalLetra(valor)
+    // Función auxiliar para convertir a letra en representación hexadecimal
+    Caracter letrasHexadecimales[6]
+    letrasHexadecimales[10] <- "A"
+    letrasHexadecimales[11] <- "B"
+    letrasHexadecimales[12] <- "C"
+    letrasHexadecimales[13] <- "D"
+    letrasHexadecimales[14] <- "E"
+    letrasHexadecimales[15] <- "F"
+
+    Devolver letrasHexadecimales[valor]
+Fin Proceso
+
+// Llamar al proceso para ejecutar el programa
+MostrarRepresentaciones()
 ```
 
 Enunciado 5
@@ -218,49 +283,63 @@ múltiplo de 5 y, como máximo 3000. Una vez que se cumplan estas condiciones se
 mostrar al usuario el número de billetes de 100, 50, 20, 10 y 5 que se necesitan para obtener la cantidad de dinero indicada.
 
 ```
-def desglose_billetes(cantidad):
-    # Inicializar variables para contar billetes
-    billetes_100 = billetes_50 = billetes_20 = billetes_10 = billetes_5 = 0
+Proceso DesgloseBilletes
+    // Definir variables
+    Definir cantidad, billetes_100, billetes_50, billetes_20, billetes_10, billetes_5 Como Entero
 
-    # Desglose de billetes
-    while cantidad >= 100:
-        billetes_100 += 1
-        cantidad -= 100
+    // Solicitar al usuario una cantidad de dinero
+    Mientras Verdadero
+        Escribir "Ingrese una cantidad de dinero (máximo 3000, múltiplo de 5): "
+        Leer cantidad
 
-    while cantidad >= 50:
-        billetes_50 += 1
-        cantidad -= 50
+        Si cantidad > 0 y cantidad <= 3000 y (cantidad MOD 5 = 0) Entonces
+            Salir del Mientras // Salir del bucle si la cantidad es válida
+        Fin Si
 
-    while cantidad >= 20:
-        billetes_20 += 1
-        cantidad -= 20
+        Escribir "La cantidad debe ser un múltiplo de 5 y no puede superar los 3000."
+    Fin Mientras
 
-    while cantidad >= 10:
-        billetes_10 += 1
-        cantidad -= 10
+    // Inicializar variables para contar billetes
+    billetes_100 <- 0
+    billetes_50 <- 0
+    billetes_20 <- 0
+    billetes_10 <- 0
+    billetes_5 <- 0
 
-    while cantidad >= 5:
-        billetes_5 += 1
-        cantidad -= 5
+    // Desglose de billetes
+    Mientras cantidad >= 100 Hacer
+        billetes_100 <- billetes_100 + 1
+        cantidad <- cantidad - 100
+    Fin Mientras
 
-    # Mostrar resultados
-    print(f"Billetes de 100: {billetes_100}")
-    print(f"Billetes de 50: {billetes_50}")
-    print(f"Billetes de 20: {billetes_20}")
-    print(f"Billetes de 10: {billetes_10}")
-    print(f"Billetes de 5: {billetes_5}")
+    Mientras cantidad >= 50 Hacer
+        billetes_50 <- billetes_50 + 1
+        cantidad <- cantidad - 50
+    Fin Mientras
 
-# Solicitar al usuario una cantidad de dinero
-while True:
-    try:
-        cantidad = int(input("Ingrese una cantidad de dinero (máximo 3000, múltiplo de 5): "))
-        if 0 < cantidad <= 3000 and cantidad % 5 == 0:
-            break  # Salir del bucle si la cantidad es válida
-        else:
-            print("La cantidad debe ser un múltiplo de 5 y no puede superar los 3000.")
-    except ValueError:
-        print("Por favor, ingrese un número válido.")
+    Mientras cantidad >= 20 Hacer
+        billetes_20 <- billetes_20 + 1
+        cantidad <- cantidad - 20
+    Fin Mientras
 
-# Calcular y mostrar el desglose de billetes
-desglose_billetes(cantidad)
+    Mientras cantidad >= 10 Hacer
+        billetes_10 <- billetes_10 + 1
+        cantidad <- cantidad - 10
+    Fin Mientras
+
+    Mientras cantidad >= 5 Hacer
+        billetes_5 <- billetes_5 + 1
+        cantidad <- cantidad - 5
+    Fin Mientras
+
+    // Mostrar resultados
+    Escribir "Billetes de 100:", billetes_100
+    Escribir "Billetes de 50:", billetes_50
+    Escribir "Billetes de 20:", billetes_20
+    Escribir "Billetes de 10:", billetes_10
+    Escribir "Billetes de 5:", billetes_5
+Fin Proceso
+
+// Llamar al proceso para ejecutar el programa
+DesgloseBilletes()
 ```
