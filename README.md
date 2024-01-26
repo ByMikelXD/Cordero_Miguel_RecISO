@@ -5,9 +5,9 @@
 1. [Introducción](#introducción)
 2. [Programación Python](#Programación-Python)
     * [Código 1](#Descripción-de-lo-que-hace-el-algoritmo-1)
-    * [Servidor NFS](#nfs-server)
-    * [Servidores WEB](#servidores-web1-y-web2)
-    * [Servidor BBDD](#ddbb)
+    * [Código 2](#Descripción-de-lo-que-hace-el-algoritmo-2)
+    * [Código 3](#Descripción-de-lo-que-hace-el-algoritmo-3)
+
 
 Introducción
 
@@ -21,7 +21,7 @@ Código1
 
 ![](FOTOS/)
 
-Descripción de lo que hace el algoritmo 2
+### Descripción de lo que hace el algoritmo 2
 
 El programa solicitara al usuario si desea ejecutarse, y si la respuesta es "s", solicita 10 números al usuario, determina si cada número es par o impar, y finalmente imprime un mensaje indicando si el número fue seleccionado o no, junto con el resto de la división por 2.
 
@@ -29,7 +29,7 @@ Código2
 
 ![](FOTOS/)
 
-Descripción de lo que hace el algoritmo 3
+### Descripción de lo que hace el algoritmo 3
 
 El programa solicitara al usuario que ingrese un número y luego imprime la tabla de multiplicar correspondiente a ese número hasta el 10. El proceso se repite hasta que el usuario ingresa 0.
 
@@ -137,6 +137,56 @@ pedirá el nombre de una ciudad al usuario. El programa indicará si la ciudad s
 conjunto o no. Deberá dar por válidas entradas en minúsculas, mayúsculas. Por ejemplo, Si
 tenemos almacenada “Mérida”, se dará por válido “mérida”, “Mérida”, “MÉRIDA”, “MériDa”,
 etc.
+
+```
+Proceso BuscarCiudad
+    // Definir el conjunto de diez ciudades predefinidas
+    Definir ciudades[10] Como Caracter
+    ciudades[1] = "Mérida"
+    ciudades[2] = "Barcelona"
+    ciudades[3] = "Madrid"
+    ciudades[4] = "Londres"
+    ciudades[5] = "París"
+    ciudades[6] = "Nueva York"
+    ciudades[7] = "Roma"
+    ciudades[8] = "Sídney"
+    ciudades[9] = "Tokio"
+    ciudades[10] = "Berlín"
+
+    // Solicitar al usuario que ingrese el nombre de una ciudad
+    Escribir "Ingrese el nombre de una ciudad: "
+    Leer ciudad_ingresada
+
+    // Convertir la ciudad ingresada a minúsculas para hacer la comparación
+    ciudad_ingresada = ConvertirAMinúsculas(ciudad_ingresada)
+
+    // Buscar la ciudad en el conjunto
+    Encontrada = Falso
+    Para i = 1 Hasta 10 Hacer
+        // Convertir la ciudad actual a minúsculas para la comparación
+        ciudad_actual = ConvertirAMinúsculas(ciudades[i])
+
+        Si ciudad_actual = ciudad_ingresada Entonces
+            Encontrada = Verdadero
+            Romper // Salir del bucle si la ciudad se encuentra
+        Fin Si
+    Fin Para
+
+    // Mostrar el resultado
+    Si Encontrada Entonces
+        Escribir "La ciudad se encuentra en el conjunto."
+    Sino
+        Escribir "La ciudad no se encuentra en el conjunto."
+    Fin Si
+Fin Proceso
+
+Proceso ConvertirAMinúsculas(caracter)
+    // Función auxiliar para convertir un string a minúsculas
+    // Puedes utilizar funciones proporcionadas por el lenguaje de programación específico
+    // o implementar tu propia lógica para convertir a minúsculas.
+    // La implementación específica dependerá del lenguaje que estés utilizando.
+Fin Proceso
+```
 
 Enunciado 4
 Desarrolla un programa que pida al usuario un número del 1 al 50 y que muestre la representación
