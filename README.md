@@ -1,4 +1,4 @@
-# Pila LEMP de 3/4 Capas - Miguel Cordero González
+# Recuperion Eloy - Miguel Cordero González
 
 # Índice
 
@@ -7,6 +7,14 @@
     * [Código 1](#Descripción-de-lo-que-hace-el-algoritmo-1)
     * [Código 2](#Descripción-de-lo-que-hace-el-algoritmo-2)
     * [Código 3](#Descripción-de-lo-que-hace-el-algoritmo-3)
+3. [Desarrollo de algoritmos en Python](Desarrollo-de-algoritmos-en-Python)
+   * [Enunciado 1](#Enunciado-1)
+   * [Enunciado 2](#Enunciado-2)
+   * [Enunciado 3](#Enunciado-3)
+   * [Enunciado 4](#Enunciado-4)
+   * [Enunciado 5](#Enunciado-5)
+5. []()
+6. []()
 
 
 Introducción
@@ -39,7 +47,7 @@ Código3
 
 # Desarrollo de algoritmos en Python
 
-Enunciado 1
+### Enunciado 1
 Desarrolla un algoritmo que pida al usuario las calificaciones de 5 módulos de un alumno.
 El algoritmo mostrará en pantalla la calificación mayor, la calificación menor, y la media de
 las calificaciones.
@@ -88,7 +96,7 @@ Proceso CalificacionesAlumno
 Fin Proceso
 ```
 
-Enunciado 2
+### Enunciado 2
 Escribe un algoritmo que, dado un número introducido por el usuario, indique si el número
 es capicua o no.
 
@@ -130,7 +138,7 @@ Proceso VerificarCapicua
 Fin Proceso
 ```
 
-Enunciado 3
+### Enunciado 3
 Implementa un algoritmo que busque el nombre de una ciudad entre un conjunto de diez ciudades
 predefinidas. Al inicio se creará el conjunto con el nombre de las diez ciudades. Posteriormente se pedirá el nombre de una ciudad al usuario. El programa indicará si la ciudad se encuentra en el conjunto o no. Deberá dar por válidas entradas en minúsculas, mayúsculas. Por ejemplo, Si tenemos almacenada “Mérida”, se dará por válido “mérida”, “Mérida”, “MÉRIDA”, “MériDa”, etc.
 
@@ -184,7 +192,7 @@ Proceso ConvertirAMinúsculas(caracter)
 Fin Proceso
 ```
 
-Enunciado 4
+### Enunciado 4
 Desarrolla un programa que pida al usuario un número del 1 al 50 y que muestre la representación de dicho número en binario, octal y hexadecimal.
 
 ```
@@ -277,7 +285,7 @@ Fin Proceso
 MostrarRepresentaciones()
 ```
 
-Enunciado 5
+### Enunciado 5
 Implementa un programa que pida al usuario una cantidad de dinero hasta que dicha cantidad sea
 múltiplo de 5 y, como máximo 3000. Una vez que se cumplan estas condiciones se tiene que
 mostrar al usuario el número de billetes de 100, 50, 20, 10 y 5 que se necesitan para obtener la cantidad de dinero indicada.
