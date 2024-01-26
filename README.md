@@ -27,7 +27,7 @@ El programa solicitara tres números al usuario, determina cuál es el mayor de 
 
 Código1
 
-![](FOTOS/)
+![](fotoseloy/codigo1png)
 
 ### Descripción de lo que hace el algoritmo 2
 
@@ -35,7 +35,7 @@ El programa solicitara al usuario si desea ejecutarse, y si la respuesta es "s",
 
 Código2
 
-![](FOTOS/)
+![](fotoseloy/codigo2png)
 
 ### Descripción de lo que hace el algoritmo 3
 
@@ -43,7 +43,7 @@ El programa solicitara al usuario que ingrese un número y luego imprime la tabl
 
 Código3
 
-![](FOTOS/)
+![](fotoseloy/codigo3png)
 
 # Desarrollo de algoritmos en Python
 
