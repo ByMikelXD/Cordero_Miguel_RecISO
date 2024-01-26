@@ -1,4 +1,4 @@
-# Recuperion Eloy - Miguel Cordero González
+# Recuperacion Eloy - Miguel Cordero González
 
 # Índice
 
@@ -17,6 +17,8 @@
    * [Video 1](#Supuesto-práctico-usuarios,-grupos-y-permisos)
 6. [Comandos Linux](#Comandos-LINUX)
    * [Ejercicio1](#Ejercicio-1)
+   * [Ejercicio2](#Ejercicio-2)
+   * [Ejercicio3](#Ejercicio-3)
 
 
 Introducción
@@ -391,6 +393,7 @@ echo "Ruta de su directorio personal: $HOME"
 ```
 
 ### Ejercicio 2
+
 Escribe los comandos necesarios para crear y borrar un usuario. Debes explicar cada comando.
 El usuario tendrá su directorio personal en una ruta diferente a la habitual. Este directorio personal se creará a la vez que se crea el usuario. También se añadirá su nombre y apellidos en el momento de la creación, así como una fecha de caducidad de la cuenta.
 
@@ -405,9 +408,27 @@ sudo useradd -m -d /ruta/del/nuevo/directorio -c "Nombre Apellido" -e YYYY-MM-DD
 + -e YYYY-MM-DD: Establece una fecha de caducidad para la cuenta del usuario (en el formato Año-Mes-Día).
 + nombre_usuario: El nombre de usuario que deseas crear.
 
-Ejercicio 3
+```
+sudo userdel -r nombre_usuario
+```
+
++ sudo: Ejecuta el comando con privilegios de administrador.
++ userdel: Comando para eliminar un usuario.
++ -r: Elimina también el directorio personal y los archivos asociados al usuario.
++ nombre_usuario: El nombre de usuario que deseas eliminar.
+
+### Ejercicio 3
+
 • Crear un directorio dentro de Documentos llamado ejercicio_permisos
 • Dentro del directorio crear 9 archivos (archiv1,archiv2,etc.)
+
+```
+mkdir ~/Documentos/ejercicio_permisos
+cd ~/Documentos/ejercicio_permisos
+
+touch archiv1 archiv2 archiv3 archiv4 archiv5 archiv6 archiv7 archiv8 archiv9
+```
+
 • Establecer a cada archivo los siguientes permisos:
 ◦ archiv1 -rwx------
 ◦ archiv2 -rw-------
@@ -418,6 +439,19 @@ Ejercicio 3
 ◦ archiv7 -r-------x
 ◦ archiv8 -rw-r—r--
 ◦ archiv9 -rw-rw-r—
+
+```
+chmod 700 archiv1
+chmod 600 archiv2
+chmod 777 archiv3
+chmod 764 archiv4
+chmod 711 archiv5
+chmod 613 archiv6
+chmod 400 archiv7
+chmod 644 archiv8
+chmod 664 archiv9
+```
+
 • Añade y/o retira permisos sobre los archivos anteriores utilizando los operadores + y - del
 'chmod' para que queden de la siguiente manera:
 ◦ archiv1 -rwx---r--
@@ -429,6 +463,31 @@ Ejercicio 3
 ◦ archiv7 -rw---x-w
 ◦ archiv8-------r--
 ◦ archiv9 -rwx------
+
+```
+chmod +x archiv1
+chmod -r archiv2
+chmod 666 archiv3
+chmod +w,--x archiv4
+chmod +wx----wx archiv5
+chmod +wxrw---- archiv6
+chmod -w+x-w archiv7
+chmod ----r-- archiv8
+chmod +rwx------ archiv9
+```
+
 • Crear un directorio y quitarle todos los permisos de ejecución.
+
+```
+mkdir directorio_prueba
+chmod 000 directorio_prueba
+```
+
 ◦ Explicar qué pasa al intentar entrar al directorio con el comando cd.
 ◦ Explicar el significado de los permisos r,w y x para directorios.
+
++ Al intentar entrar al directorio con el comando cd, recibirás un mensaje de error indicando que no tienes permisos para acceder al directorio.
++ Los permisos para directorios tienen los siguientes significados:
+r (Read): Permite ver el contenido del directorio.
+w (Write): Permite crear, borrar o renombrar archivos en el directorio.
+x (Execute): Permite entrar y acceder al contenido del directorio.
