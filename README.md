@@ -491,3 +491,47 @@ chmod 000 directorio_prueba
 r (Read): Permite ver el contenido del directorio.
 w (Write): Permite crear, borrar o renombrar archivos en el directorio.
 x (Execute): Permite entrar y acceder al contenido del directorio.
+
+
+# Windows
+Supuesto práctico
+
+Crea la siguiente estructura departamental trasladándola a carpetas, es decir, crea una carpeta por cada
+departamento.
+Crea primero la carpeta 'empresaMaderArt' y dentro de ésta las demás. Introduce algunos archivos,
+documentos, imágenes en cada carpeta. Sitúa la estructura de carpetas colgando directamente de una
+unidad de disco.
+
+![](fotoseloy/video-ventana.png)
+
+Después crea 2 usuarios para cada departamento (usuarios con privilegios limitados). Los usuarios
+aparecen al final de la tarea.
+Nómbralos, con la inicial del nombre y el primer apellido (por ejemplo: Ignacio Díaz sería idiaz).
+Guarda en la descripción de cada usuario el nombre y apellido completos. Crea un grupo de usuarios
+para cada departamento e incluye los dos usuarios en él. Un usuario sólo podrá pertenecer a un grupo
+únicamente.
+Configura los permisos de cada carpeta para que los grupos de usuarios de cada departamento tengan
+permisos de lectura y escritura sobre su carpeta del departamento. El resto de usuarios no tendrá
+acceso a carpetas de otros departamentos distintos del suyo.
+Inicia sesión con diferentes usuarios y comprueba que los permisos sobre las carpetas son correctos y
+que un usuario de un departamento sólo puede acceder a la carpeta común de su departamento. Intenta
+acceder a otras carpetas a las que el usuario no debería tener acceso.
+Inicia sesión con un usuario del primer departamento. En la carpeta del departamento cifra uno de los
+documentos que hay dentro. Haz una copia de seguridad del certificado de cifrado con la contraseña
+123. Intenta entrar con el otro usuario del departamento y acceder al archivo cifrado e indica qué
+ocurre.
+Habilita las directivas de contraseña correspondientes para que el sistema guarde registro de las 4
+últimas contraseñas de usuario, éstas deben ser complejas, tener una vigencia máxima de 1 mes, una
+longitud mínima de 10 caracteres y que permita hasta 3 equivocaciones del usuario al iniciar sesión.
+
+Usuarios:
+ Fernando Cortés
+ Marina Céspedes
+ Salvador Jiménez
+ Martín Rodríguez
+ Luisa Serrano
+ Rosa Valle
+ Dolores Huertas
+ Estefanía Pérez
+ Ignacio Díaz
+ Arancha Benavente
