@@ -432,15 +432,15 @@ touch archiv1 archiv2 archiv3 archiv4 archiv5 archiv6 archiv7 archiv8 archiv9
 
 • Establecer a cada archivo los siguientes permisos:
 
-◦ archiv1 -rwx------
-◦ archiv2 -rw-------
-◦ archiv3 -rwxrwxrwx
-◦ archiv4 -rwxrw-r--
-◦ archiv5 -rwxr-----
-◦ archiv6 -r-xrw-r--
-◦ archiv7 -r-------x
-◦ archiv8 -rw-r—r--
-◦ archiv9 -rw-rw-r—
++ archiv1 -rwx------
++ archiv2 -rw-------
++ archiv3 -rwxrwxrwx
++ archiv4 -rwxrw-r--
++ archiv5 -rwxr-----
++ archiv6 -r-xrw-r--
++ archiv7 -r-------x
++ archiv8 -rw-r—r--
++ archiv9 -rw-rw-r—
 
 ```
 chmod 700 archiv1
@@ -457,15 +457,15 @@ chmod 664 archiv9
 • Añade y/o retira permisos sobre los archivos anteriores utilizando los operadores + y - del
 'chmod' para que queden de la siguiente manera:
 
-◦ archiv1 -rwx---r--
-◦ archiv2 -r--------
-◦ archiv3 -rw-rw-rwarchiv4
-◦ -rwx-w----
-◦ archiv5 -rwx----wx
-◦ archiv6 -rwxrw----
-◦ archiv7 -rw---x-w
-◦ archiv8-------r--
-◦ archiv9 -rwx------
++ archiv1 -rwx---r--
++ archiv2 -r--------
++ archiv3 -rw-rw-rwarchiv4
++ -rwx-w----
++ archiv5 -rwx----wx
++ archiv6 -rwxrw----
++ archiv7 -rw---x-w
++ archiv8-------r--
++ archiv9 -rwx------
 
 ```
 chmod +x archiv1
@@ -521,13 +521,13 @@ Inicia sesión con un usuario del primer departamento. En la carpeta del departa
 Habilita las directivas de contraseña correspondientes para que el sistema guarde registro de las 4 últimas contraseñas de usuario, éstas deben ser complejas, tener una vigencia máxima de 1 mes, una longitud mínima de 10 caracteres y que permita hasta 3 equivocaciones del usuario al iniciar sesión.
 
 Usuarios:
- Fernando Cortés
- Marina Céspedes
- Salvador Jiménez
- Martín Rodríguez
- Luisa Serrano
- Rosa Valle
- Dolores Huertas
- Estefanía Pérez
- Ignacio Díaz
- Arancha Benavente
++ Fernando Cortés
++ Marina Céspedes
++ Salvador Jiménez
++ Martín Rodríguez
++ Luisa Serrano
++ Rosa Valle
++ Dolores Huertas
++ Estefanía Pérez
++ Ignacio Díaz
++ Arancha Benavente
