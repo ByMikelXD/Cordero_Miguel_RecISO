@@ -502,7 +502,7 @@ Crea primero la carpeta 'empresaMaderArt' y dentro de ésta las demás. Introduc
 documentos, imágenes en cada carpeta. Sitúa la estructura de carpetas colgando directamente de una
 unidad de disco.
 
-![](fotoseloy/video-ventana.png)
+![](fotoseloy/video_ventana.png)
 
 Después crea 2 usuarios para cada departamento (usuarios con privilegios limitados). Los usuarios
 aparecen al final de la tarea.
