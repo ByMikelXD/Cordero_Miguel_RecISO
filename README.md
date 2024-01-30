@@ -2,27 +2,28 @@
 
 # Índice
 
-1. [Introducción](#introducción)
-2. [Programación Python](#Programación-Python)
+1. [Programación Python](#Programación-Python)
     * [Código 1](#Descripción-de-lo-que-hace-el-algoritmo-1)
     * [Código 2](#Descripción-de-lo-que-hace-el-algoritmo-2)
     * [Código 3](#Descripción-de-lo-que-hace-el-algoritmo-3)
-3. [Desarrollo de algoritmos en Python](Desarrollo-de-algoritmos-en-Python)
+2. [Desarrollo de algoritmos en Python](Desarrollo-de-algoritmos-en-Python)
    * [Enunciado 1](#Enunciado-1)
    * [Enunciado 2](#Enunciado-2)
    * [Enunciado 3](#Enunciado-3)
    * [Enunciado 4](#Enunciado-4)
    * [Enunciado 5](#Enunciado-5)
-5. [Linux](#lINUX)
+3. [Linux](#lINUX)
    * [Video 1](#Supuesto-práctico-usuarios,-grupos-y-permisos)
-6. [Comandos Linux](#Comandos-LINUX)
+4. [Comandos Linux](#Comandos-LINUX)
    * [Ejercicio1](#Ejercicio-1)
    * [Ejercicio2](#Ejercicio-2)
    * [Ejercicio3](#Ejercicio-3)
-7. [Windows](#Windows)
+5. [Windows](#Windows)
+   * [Gestión de recursos y otros](#Gestión-de-recursos-y-otros)
+6. [Virtualización](#Virtualización)
+7. [Red NAT](#Red-NAT)
 
 
-Introducción
 
 # Programación Python
 
@@ -531,3 +532,46 @@ Usuarios:
 + Estefanía Pérez
 + Ignacio Díaz
 + Arancha Benavente
+
+
+# Gestión de recursos y otros
+
+Comandos para la gestión de procesos y memoria
+
+Desarrolla un listado de comandos en LINUX. Debes indicar para cada comando una descripción, así como un ejemplo de ejecución (captura de pantalla).
+
+Licencias 1
+
+Realiza un estudio de como puede ser el software comercial en función de las licencias de
+distribución: OEM, Retail y Licencias por volumen. Explica con tus propias palabras en qué
+consiste cada una de estas licencias y expón un ejemplo práctico de cada una de ellas.
+
+Licencias 2
+
+Investiga acerca de las licencias “Creative Commons”. Explica en qué consiste cada una de ellas y expón un ejemplo de creación de una licencia concreta (capturas de pantalla).
+
+# Virtualización
+
+Instalación dual
+
+Crea una máquina virtual de arquitectura de 64bits, memoria principal de 2GB y 80GB de disco
+duro.
+
+En dicha máquina instalarás dos sistemas operativos, Windows 7 y Xubuntu 16.04, de forma que al
+iniciar la máquina se nos de la opción de elegir qué sistema queremos arrancar.
+
+El disco duro quedará particionado de la siguiente forma:
++ 1 partición NTFS de 20GB para instalar Windows7.
++ 1 partición FAT32 de 10GB para datos de Windows7.
++ 1 partición EXT4 para /boot de 512MB.
++ 1 partición EXT4 de 20GB para “/”.
++ 1 partición EXT4 de 4GB para swap.
++ 1 partición EXT4 del resto de capacidad para “/home”
+
+En el vídeo se tiene que mostrar todo el proceso de creación y configuración de la máquina, siendo imprescindible mostrar cómo queda finalmente el particionado del disco, así como el arranque dual del sistema.
+
+# Red NAT
+
+Crea otra máquina virtual con el sistema operativo que desees.
+Crea una red NAT en la que estén conectadas ambas máquinas, la creada en la “instalación dual” y la que acabas de crear.
+Tienes que mostrar, mediante capturas de pantalla, el proceso de creación de la red, así como las pruebas que permiten comprobar que ambas máquinas se encuentran en la misma red.
