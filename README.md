@@ -13,7 +13,6 @@
    * [Enunciado 4](#Enunciado-4)
    * [Enunciado 5](#Enunciado-5)
 3. [Linux](#lINUX)
-   * [Video 1](#Supuesto-práctico-usuarios,-grupos-y-permisos)
 4. [Comandos Linux](#Comandos-LINUX)
    * [Ejercicio1](#Ejercicio-1)
    * [Ejercicio2](#Ejercicio-2)
