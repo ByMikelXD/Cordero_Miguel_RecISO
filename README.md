@@ -551,6 +551,10 @@ Investiga acerca de las licencias “Creative Commons”. Explica en qué consis
 
 # Virtualización
 
+### Enlace al video
+
+- 
+
 Instalación dual
 
 Crea una máquina virtual de arquitectura de 64bits, memoria principal de 2GB y 80GB de disco
@@ -571,6 +575,27 @@ En el vídeo se tiene que mostrar todo el proceso de creación y configuración 
 
 # Red NAT
 
+### Enlace al video 2
+
+- 
+
 Crea otra máquina virtual con el sistema operativo que desees.
 Crea una red NAT en la que estén conectadas ambas máquinas, la creada en la “instalación dual” y la que acabas de crear.
 Tienes que mostrar, mediante capturas de pantalla, el proceso de creación de la red, así como las pruebas que permiten comprobar que ambas máquinas se encuentran en la misma red.
+
+Primero creamos la red nat que vamos a asociar a las maquina virtuales ya creadas
+
+![](fotoseloy/dual1.png)
+
+Luego nos vamos a la configuracion de la maquina > red > adaptador 1. Y selecionamos la red nat que hamos creado
+
+![](fotoseloy/dual2.png)
+
+Luego iniciamos las dos maquina y comprobamos que nos asocia una direccion ip mediante dchp
+
+![](fotoseloy/dual3.png)
+![](fotoseloy/dual4.png)
+
+Y ya por ultimos probamos que estan en la misma red mediante un ping
+
+![](fotoseloy/dual5.png)
