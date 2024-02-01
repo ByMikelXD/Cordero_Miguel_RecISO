@@ -20,7 +20,7 @@
 5. [Windows](#Windows)
    * [Gestión de recursos y otros](#Gestión-de-recursos-y-otros)
 6. [Virtualización](#Virtualización)
-   * [VIDEO](#Enlace-al-viedo)
+   * [VIDEO](#Enlace-al-video)
 8. [Red NAT](#Red-NAT)
    * [VIDEO](#Enlace-al-viedo2)
 
