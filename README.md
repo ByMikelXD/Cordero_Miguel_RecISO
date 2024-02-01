@@ -22,7 +22,7 @@
 6. [Virtualización](#Virtualización)
    * [VIDEO](#Enlace-al-video)
 8. [Red NAT](#Red-NAT)
-   * [VIDEO](#Enlace-al-viedo2)
+   * [VIDEO](#Enlace-al-video2)
 
 
 
