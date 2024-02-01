@@ -547,9 +547,39 @@ Realiza un estudio de como puede ser el software comercial en función de las li
 distribución: OEM, Retail y Licencias por volumen. Explica con tus propias palabras en qué
 consiste cada una de estas licencias y expón un ejemplo práctico de cada una de ellas.
 
+Las licencias de distribución en el software comercial son esenciales para definir cómo se pueden adquirir, distribuir y utilizar los productos. Tres tipos comunes de licencias son OEM (Original Equipment Manufacturer), Retail y Licencias por Volumen.
+
+OEM (Original Equipment Manufacturer):
+Estas licencias están diseñadas para ser incluidas con hardware específico.
+Retail (venta al por menor):
+Las licencias retail se venden directamente al consumidor final a través de minoristas.
+Licencias por Volumen:
+Diseñadas para organizaciones que necesitan implementar el software en múltiples máquinas.
+
 Licencias 2
 
 Investiga acerca de las licencias “Creative Commons”. Explica en qué consiste cada una de ellas y expón un ejemplo de creación de una licencia concreta (capturas de pantalla).
+
+Las licencias Creative Commons son un conjunto de licencias de derechos de autor que permiten a los creadores de contenido especificar los permisos que otorgan a otros con respecto a su obra.
+
+Atribución (CC BY):
+Esta licencia permite a otros copiar, distribuir, mostrar y realizar la obra y las obras derivadas, incluso con fines comerciales, siempre y cuando se dé crédito al autor original de la manera especificada por estos.
+
+Atribución-CompartirIgual (CC BY-SA):
+Esta licencia permite a otros remixar, retocar, y crear a partir de la obra, incluso con fines comerciales, siempre y cuando otorguen la misma licencia a las obras derivadas.
+
+Atribución-NoComercial (CC BY-NC):
+Esta licencia permite a otros copiar, distribuir, mostrar y realizar la obra y las obras derivadas, pero solo para fines no comerciales.
+
+Atribución-NoComercial-CompartirIgual (CC BY-NC-SA):
+Esta licencia permite a otros remixar, retocar, y crear a partir de la obra, incluso con fines comerciales, siempre y cuando otorguen la misma licencia a las obras derivadas y no las utilicen con fines comerciales.
+
+Atribución-NoComercial-SinDerivadas (CC BY-NC-ND):
+Esta licencia es la más restrictiva de las seis licencias principales, solo permite descargar las obras y compartirlas con otras personas siempre que se dé crédito, pero no se pueden cambiar de ninguna manera ni se pueden utilizar comercialmente.
+
+![](fotoseloy/licencia.png)
+
+Recuperar eloy tiene licencia CC BY-NC-SA 4.0.© 2 por m 
 
 # Virtualización
 
