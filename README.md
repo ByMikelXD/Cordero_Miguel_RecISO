@@ -20,7 +20,9 @@
 5. [Windows](#Windows)
    * [Gestión de recursos y otros](#Gestión-de-recursos-y-otros)
 6. [Virtualización](#Virtualización)
-7. [Red NAT](#Red-NAT)
+   * [VIDEO](#Enlace-al-viedo)
+8. [Red NAT](#Red-NAT)
+   * [VIDEO](#Enlace-al-viedo2)
 
 
 
@@ -553,7 +555,7 @@ Investiga acerca de las licencias “Creative Commons”. Explica en qué consis
 
 ### Enlace al video
 
-- 
+- https://youtu.be/RV0ZHygoS5Y
 
 Instalación dual
 
@@ -577,7 +579,7 @@ En el vídeo se tiene que mostrar todo el proceso de creación y configuración 
 
 ### Enlace al video 2
 
-- 
+- https://youtu.be/5xy6GP_18Jw
 
 Crea otra máquina virtual con el sistema operativo que desees.
 Crea una red NAT en la que estén conectadas ambas máquinas, la creada en la “instalación dual” y la que acabas de crear.
